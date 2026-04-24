@@ -83,6 +83,9 @@ See [`commands/README.md`](./commands/README.md) and [`skills/README.md`](./skil
 **Examples, checklists, glossary, anti-patterns**
 - [`examples/`](./examples/), [`checklists/`](./checklists/), [`glossary.md`](./glossary.md), [`anti-patterns.md`](./anti-patterns.md)
 
+**Sessions**
+- [`sessions.md`](./sessions.md) — journal protocol for session-to-session continuity
+
 **Maintenance**
 - [`update.md`](./update.md) — self-update protocol
 - [`CHANGELOG.md`](./CHANGELOG.md) — version history
@@ -110,6 +113,6 @@ The kit itself follows SemVer. See [`CHANGELOG.md`](./CHANGELOG.md). To upgrade 
 
 ## Status
 
-- Version: `0.1.0`
+- Version: `0.2.0`
 - Date: `2026-04-24`
 - Maintainer: you (the repo owner)

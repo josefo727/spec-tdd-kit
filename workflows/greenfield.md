@@ -34,6 +34,8 @@ Add a minimal `.gitignore` appropriate to the planned stack (decide stack only a
 
 Create an empty `.specs/constitution.md` placeholder; do not fill it yet.
 
+Create `JOURNAL.md` at the repo root with the first session entry (see [`../sessions.md`](../sessions.md)). This is how session continuity is preserved.
+
 Agent: confirm the workflow choice with the user in Spanish. If the user wants Spec Kit interop too, read [`../tools/spec-kit-compat.md`](../tools/spec-kit-compat.md) before proceeding.
 
 ---

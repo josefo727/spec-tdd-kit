@@ -31,6 +31,7 @@ Run research passes for each of the following dimensions. Use `context7` MCP fir
 5. **Language/framework major versions** — Laravel, Vue, React, Node LTS, Python, Rust, Go, Flutter, Quasar, VTEX IO. If a major jumped and the kit's guidance is no longer idiomatic, patch.
 6. **User feedback** — search memory (`~/.claude/projects/-home-josefo/memory/`) for feedback memories written since the last kit update. Bake applicable lessons into the kit.
 7. **Anti-patterns backlog** — scan recent project retros stored under `~/.claude/projects/*/memory/` for new anti-patterns; append to `anti-patterns.md`.
+8. **Session protocol patterns** — review `JOURNAL.md` quality across kit-managed projects. If recurring friction or missing sections appear, amend [`sessions.md`](./sessions.md).
 
 ## Protocol
 

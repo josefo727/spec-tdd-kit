@@ -6,6 +6,20 @@ Format: `Added` / `Changed` / `Deprecated` / `Removed` / `Fixed` / `Security`.
 
 ## [Unreleased]
 
+## [0.2.0] — 2026-04-24
+
+### Added
+
+- `sessions.md` — journal protocol for session-to-session continuity. Every kit-managed project keeps a `JOURNAL.md` at repo root, append-only, written on pause and read on resume.
+- `AGENTS.md` — new §"Session protocol (journal)" documenting on-resume / on-pause / silent-close agent behavior.
+- `workflows/greenfield.md` — bootstrap step creates `JOURNAL.md` with first session entry.
+- `workflows/brownfield.md` — onboarding step creates `JOURNAL.md` with first session entry.
+- `update.md` — new research trigger 8: review journal quality across projects and amend `sessions.md` if patterns emerge.
+
+### Changed
+
+- `README.md` — TOC includes new "Sessions" section; version bumped.
+
 ## [0.1.0] — 2026-04-24
 
 ### Added

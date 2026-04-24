@@ -69,6 +69,32 @@ If evidence is missing, **stop and surface the gap** to the user. Do not fabrica
 - Propose two paths: (a) refuse the request, (b) amend the constitution via ADR.
 - Do not proceed until the user chooses.
 
+## Session protocol (journal)
+
+Every kit-managed project has a `JOURNAL.md` at its root. Claude Code uses it to preserve continuity across sessions. Full spec: [`sessions.md`](./sessions.md).
+
+### On resume (session start)
+
+1. Read the **last entry** of `JOURNAL.md` before anything else.
+2. Summarise in Spanish: *"retomamos desde X; queda pendiente Y"*.
+3. Propose the **specific next step** (slash command, file, test).
+4. Wait for user confirmation; never assume.
+
+### On pause (session end)
+
+1. Announce in Spanish: *"voy a añadir entrada al journal antes de cerrar"*.
+2. Append a new entry with current date/time, following the format in [`sessions.md`](./sessions.md).
+3. Offer the draft to the user for edits.
+4. Commit: `docs: journal entry YYYY-MM-DD`.
+
+### Silent close detection
+
+If on the next session the latest commit is newer than the latest journal entry, propose a retrospective entry. Do not fabricate — ask the user for the missing context.
+
+### When `JOURNAL.md` does not exist
+
+Create it at the current session's bootstrap, with an initial entry describing the session about to start. Both `workflows/greenfield.md` and `workflows/brownfield.md` include this as an explicit step.
+
 ## Self-update
 
 - If the user types anything like *"actualiza el kit"*, *"realiza un update"*, *"run update"*, open [`update.md`](./update.md) and follow the protocol.
