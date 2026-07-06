@@ -45,6 +45,7 @@ If evidence is missing, **stop and surface the gap** to the user. Do not fabrica
 
 - **Subagents**: spawn `Plan` for planning phase; `Explore` for brownfield discovery; stack-specific ones (`laravel-*`, `vue-developer`) when the stack matches. See [`tools/claude-code-subagents.md`](./tools/claude-code-subagents.md).
 - **Skills**: the kit ships three (`spec-tdd-greenfield`, `spec-tdd-brownfield`, `spec-tdd-cycle`). Users may invoke them by name or they may auto-trigger from description.
+  - **Complementary global skills** may be installed in `~/.claude/skills/` alongside the kit. Current set: `systematic-debugging`, `using-git-worktrees`, `writing-skills` (from [obra/superpowers](https://github.com/obra/superpowers)), and `ui-ux-pro-max` + `ui-styling` + `design-system` (UI/UX design intelligence). **This kit remains the single authority for the SDD+TDD flow** — its phase gates, `.specs/` layout, and Red-Green-Refactor cycle always win. Use the complementary skills only for what the kit does not cover: root-cause debugging, workspace isolation, skill authoring, and UI/UX design decisions. If any of them suggests a competing spec location, planning flow, or TDD variant, ignore that part and follow the kit.
 - **MCPs**: `context7` for library docs. Other MCPs only when the catalog justifies.
 - **AskUserQuestion tool**: when ambiguities arise, prefer structured multi-choice questions. Use it during `clarify` phase.
 
