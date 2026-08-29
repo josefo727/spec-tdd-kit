@@ -64,7 +64,7 @@ See [`commands/README.md`](./commands/README.md) and [`skills/README.md`](./skil
 - [`phases/06-verify.md`](./phases/06-verify.md)
 
 **Templates** — fill in the blanks
-- [`templates/`](./templates/) — constitution, spec, plan, research, contracts, tasks, ADR, test-plan
+- [`templates/`](./templates/) — constitution, spec, plan, research, contracts, tasks, ADR, test-plan, claude-settings (permission boundary)
 
 **Stacks** — the concrete test stack
 - [`stacks/_generic.md`](./stacks/_generic.md) plus per-stack files
@@ -85,6 +85,10 @@ See [`commands/README.md`](./commands/README.md) and [`skills/README.md`](./skil
 
 **Sessions**
 - [`sessions.md`](./sessions.md) — journal protocol for session-to-session continuity
+
+**Ratchet**
+- [`ratchet.md`](./ratchet.md) — dated rules, promotion ladder (correction → rule → hook), pruning
+- [`adr/`](./adr/) — kit-level decision records
 
 **Maintenance**
 - [`update.md`](./update.md) — self-update protocol
@@ -113,6 +117,6 @@ The kit itself follows SemVer. See [`CHANGELOG.md`](./CHANGELOG.md). To upgrade 
 
 ## Status
 
-- Version: `0.2.0`
-- Date: `2026-04-24`
+- Version: `0.3.0`
+- Date: `2026-08-29`
 - Maintainer: you (the repo owner)

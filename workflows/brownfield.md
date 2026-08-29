@@ -132,6 +132,7 @@ The index tells Claude Code where it is allowed to mock and what is considered d
 
 - Create `.specs/` top level (if not already) with `constitution.md`, `adr/`, `onboarding.md`, `test-inventory.md`, `index.md`.
 - Create `JOURNAL.md` at repo root if absent; add an entry describing the onboarding session (see [`../sessions.md`](../sessions.md)).
+- Create `.claude/settings.json` from [`../templates/claude-settings.md`](../templates/claude-settings.md), adjusted to the stack; commit it. On brownfield, seed the `deny` tier from incidents already known to the team.
 - Install slash commands and skills if not yet ([`../INSTALL.md`](../INSTALL.md)).
 - Add a `CONTRIBUTING.md` snippet (or update existing) noting: "New features follow `@~/Projects/spec-tdd-kit/workflows/feature-flow.md`".
 - Commit: `docs: adopt spec-tdd-kit for future features`.

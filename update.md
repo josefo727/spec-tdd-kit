@@ -32,6 +32,7 @@ Run research passes for each of the following dimensions. Use `context7` MCP fir
 6. **User feedback** — search memory (`~/.claude/projects/-home-josefo/memory/`) for feedback memories written since the last kit update. Bake applicable lessons into the kit.
 7. **Anti-patterns backlog** — scan recent project retros stored under `~/.claude/projects/*/memory/` for new anti-patterns; append to `anti-patterns.md`.
 8. **Session protocol patterns** — review `JOURNAL.md` quality across kit-managed projects. If recurring friction or missing sections appear, amend [`sessions.md`](./sessions.md).
+9. **Rule hygiene (ratchet)** — review guide files (`AGENTS.md`, `CLAUDE.md`, constitutions) across kit-managed projects: undated rules, untraceable rules, rules eligible for promotion to hooks/permissions per [`ratchet.md`](./ratchet.md). Feed recurring patterns back into `ratchet.md` and [`templates/claude-settings.md`](./templates/claude-settings.md).
 
 ## Protocol
 

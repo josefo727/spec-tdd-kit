@@ -99,6 +99,22 @@ If on the next session the latest commit is newer than the latest journal entry,
 
 Create it at the current session's bootstrap, with an initial entry describing the session about to start. Both `workflows/greenfield.md` and `workflows/brownfield.md` include this as an explicit step.
 
+## Ratchet protocol
+
+Corrections must outlive the conversation. Full spec: [`ratchet.md`](./ratchet.md).
+
+1. **Second correction of the same failure class** → propose a **dated rule** for the project's
+   guide file (`AGENTS.md` / `CLAUDE.md` / constitution), in the ratchet format:
+   `- [YYYY-MM-DD] <rule> — <failure that motivated it>`. Never add it silently.
+2. **Third occurrence** (rule violated, or user corrects again despite the rule) → propose
+   **promotion to structure**: a `deny`/`ask` permission, a hook, or a test. Draft the concrete
+   diff (`.claude/settings.json` per [`templates/claude-settings.md`](./templates/claude-settings.md)).
+   Never install it silently.
+3. **Every rule you write** carries a date and a trace. Undated rules are only allowed in the
+   bootstrap block (build/test/lint commands, project facts).
+4. **When asked to prune**: delete rules now enforced by structure, consolidate duplicates,
+   re-justify or delete untraceable rules. List deletions for confirmation first.
+
 ## Self-update
 
 - If the user types anything like *"actualiza el kit"*, *"realiza un update"*, *"run update"*, open [`update.md`](./update.md) and follow the protocol.

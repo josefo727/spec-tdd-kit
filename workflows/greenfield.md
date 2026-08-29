@@ -36,6 +36,8 @@ Create an empty `.specs/constitution.md` placeholder; do not fill it yet.
 
 Create `JOURNAL.md` at the repo root with the first session entry (see [`../sessions.md`](../sessions.md)). This is how session continuity is preserved.
 
+Create `.claude/settings.json` from [`../templates/claude-settings.md`](../templates/claude-settings.md), adjusted to the planned stack (or the generic tiers if the stack is not yet decided), and commit it. This encodes the project's permission boundary from day one.
+
 Agent: confirm the workflow choice with the user in Spanish. If the user wants Spec Kit interop too, read [`../tools/spec-kit-compat.md`](../tools/spec-kit-compat.md) before proceeding.
 
 ---

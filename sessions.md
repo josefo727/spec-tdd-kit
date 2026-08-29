@@ -124,6 +124,20 @@ A single feature's `tasks.md` may span multiple journal entries. A single journa
 - **On silent close**: next session detects gap → offers retrospective entry.
 - **Never**: rewrite old entries, fabricate facts, skip the journal because "nothing happened".
 
+## The recovery test
+
+Run once per project, after the first real pause (added in kit `0.3.0`):
+
+1. Close the session in the middle of a multi-step task (after writing the journal entry).
+2. Reopen in a fresh session.
+3. Verify the agent reads the last journal entry plus `tasks.md`, identifies the last completed
+   beat, and proposes the next concrete step — **without** repeating completed work and
+   **without** asking the user to re-explain the task.
+
+If it fails, the fix is the journal entry format, not the agent: the `Resume from` section was
+not specific enough. Tighten it (file, line, task id, exact command) and re-test at the next
+pause. Record the passed test with a one-line note in that session's journal entry.
+
 ## Cross-references
 
 - Agent directives: [`AGENTS.md`](./AGENTS.md) § Session protocol

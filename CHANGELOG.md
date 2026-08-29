@@ -6,6 +6,23 @@ Format: `Added` / `Changed` / `Deprecated` / `Removed` / `Fixed` / `Security`.
 
 ## [Unreleased]
 
+## [0.3.0] — 2026-08-29
+
+### Added
+
+- `adr/` — kit-level decision records. First entry: `adr/0001-ratchet-and-permission-boundaries.md` (accepted), from a gap analysis of the harness engineering playbook against the kit.
+- `ratchet.md` — the ratchet discipline: dated rules traced to failures, promotion ladder (in-chat correction → dated guide rule → hook/permission/test), monthly pruning.
+- `templates/claude-settings.md` — capability-budget template for per-project `.claude/settings.json` (allow / ask / deny tiers, Laravel example, hook promotion example).
+- `AGENTS.md` — new §"Ratchet protocol": second correction proposes a dated rule, third occurrence proposes promotion to structure; never silently.
+- `anti-patterns.md` — entries 16 ("Undated rule pile") and 17 ("Trust-based verification").
+- `sessions.md` — new §"The recovery test": once per project, verify resume-from-journal works without repeated work or re-explanation.
+- `workflows/greenfield.md` / `workflows/brownfield.md` — bootstrap/onboarding step creating a committed `.claude/settings.json` from the template.
+- `update.md` — new research trigger 9: rule hygiene review across kit-managed projects.
+
+### Changed
+
+- `README.md` — TOC includes "Ratchet" section and the new template; version bumped.
+
 ## [0.2.0] — 2026-04-24
 
 ### Added

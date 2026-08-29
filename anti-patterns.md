@@ -126,3 +126,21 @@ Things that look like SDD+TDD but are not. Call them out early; they silently er
 **Defense.**
 - `verify` on small features is cheap (5 minutes with `/sdd-verify`). Run it.
 - The kit's checklist in [`checklists/done.md`](./checklists/done.md) is non-negotiable.
+
+## 16. Undated rule pile
+
+**Symptom.** The guide file (`AGENTS.md`, `CLAUDE.md`, constitution) grows one rule at a time with no dates and no trace to the failure that motivated each rule. Months later, rules contradict each other, nobody dares delete anything, and the agent starts ignoring the file.
+
+**Defense.**
+- Every rule born from a failure carries a date and a one-line trace. Format and pruning schedule in [`ratchet.md`](./ratchet.md).
+- Monthly prune: delete rules now enforced by hooks/tests/permissions, consolidate duplicates, re-justify or delete untraceable rules.
+- A guide file that only grows is technical debt, not a harness.
+
+## 17. Trust-based verification
+
+**Symptom.** Checks that only run if the agent remembers to run them. The same correction is made in chat for the fourth time. Lint passes locally "most sessions". A rule exists in the guide file, yet the violation keeps landing in commits.
+
+**Defense.**
+- Third repetition of a correction is the promotion signal: convert the rule into a hook, a permission boundary, or a test — see the promotion ladder in [`ratchet.md`](./ratchet.md).
+- Encode the project's permission boundary in a committed `.claude/settings.json` ([`templates/claude-settings.md`](./templates/claude-settings.md)) instead of relying on interactive prompts.
+- The test: would the check still run if the agent forgot the rule existed? If no, it is trust, not verification.
